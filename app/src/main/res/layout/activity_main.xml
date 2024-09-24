@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    tools:context=".MainActivity"
+    tools:ignore="UseSwitchCompatOrMaterialXml">
+
+    <EditText
+        android:id="@+id/Service_Cost"
+        android:hint="Type here"
+        android:inputType="number"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/Service_How"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How was the service?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <RadioGroup
+        android:id="@+id/Tip_Options"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Service_How">
+
+        <RadioButton
+            android:id="@+id/Tip_15_Percent"
+            android:text="Good (15%)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/Tip_20_Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wow  (20%)"/>
+
+        <RadioButton
+            android:id="@+id/Tip_30_Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Best Service (30%)" />
+    </RadioGroup>
+    <Switch
+        android:id="@+id/Round_Tip"
+        app:layout_constraintTop_toBottomOf="@id/Tip_Options"
+        app:layout_constraintStart_toStartOf="@id/Tip_Options"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Round up Tip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/Calculate_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calculate Tip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Round_Tip" />
+
+    <TextView
+        android:id="@+id/Tip_Result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="136dp"
+        android:text="Tip Ammount: ₱"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Calculate_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
